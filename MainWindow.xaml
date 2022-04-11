@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:widget_Clock"
         mc:Ignorable="d"
-        Height="130" Width="300" AllowsTransparency="True" WindowStyle="None" Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded" WindowStartupLocation="Manual" Left="10" Top="50">
+        Height="160" Width="300" AllowsTransparency="True" WindowStyle="None" Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded" WindowStartupLocation="Manual" Left="10" Top="50">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Template">
@@ -23,6 +23,7 @@
             <Setter Property="ItemsControl.FontFamily" Value="Courier New"/>
             <Setter Property="ItemsControl.HorizontalAlignment" Value="Center"/>
             <Setter Property="ItemsControl.VerticalAlignment" Value="Center"/>
+            <Setter Property="ItemsControl.Margin" Value="0, 2, 0, 2"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -36,11 +37,13 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Button Grid.Row="0" HorizontalAlignment="Right" Click="Close_Click"/>
                 <TextBlock Grid.Row="1" x:Name="cDate" FontSize="15" Style="{StaticResource tbStyle}"/>
                 <TextBlock Grid.Row="2" x:Name="cTime" FontSize="30" Style="{StaticResource tbStyle}"/>
-                <TextBlock Grid.Row="3" x:Name="ip" FontSize="15" Style="{StaticResource tbStyle}"/>
+                <TextBlock Grid.Row="3" x:Name="tz" FontSize="15" Style="{StaticResource tbStyle}"/>
+                <TextBlock Grid.Row="4" x:Name="ip" FontSize="15" Style="{StaticResource tbStyle}"/>
             </Grid>
         </Border>
     </Grid>

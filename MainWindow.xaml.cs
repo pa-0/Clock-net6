@@ -42,6 +42,9 @@ namespace widget_Clock
             }, this.Dispatcher);
             timer.Start();
 
+            TimeZoneInfo timeZone = TimeZoneInfo.Local;
+            tz.Text = timeZone.DisplayName.ToString();
+
             try
             {
                 ip.Text = new System.Net.WebClient().DownloadString("https://ipv4.icanhazip.com/");
